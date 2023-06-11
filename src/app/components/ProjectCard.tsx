@@ -2,8 +2,7 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react'
-import { AiOutlineGithub } from 'react-icons/ai';
-import { BsArrowUpRight } from 'react-icons/bs';
+
 
 import { motion } from 'framer-motion';
 

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { BsYinYang } from 'react-icons/bs'
+import { FaYinYang } from 'react-icons/fa'
 
 const PageWrapper = ({children}: {children: React.ReactNode}) => {
   return (
@@ -16,7 +16,7 @@ const PageWrapper = ({children}: {children: React.ReactNode}) => {
        exit={{ x: ["0%", "100%"], width: ["0%", "100%"]}}
        transition={{duration: 0.5, ease: "easeInOut"}}>
           <div className="flex justify-center items-center h-full w-full">
-            <BsYinYang  className='animate-spin text-3xl sm:text-4xl md:text-[80px] flex justify-center items-center' />
+            <FaYinYang  className='animate-spin text-3xl sm:text-4xl md:text-[80px] flex justify-center items-center' />
           </div>
     </motion.div>
     <motion.div

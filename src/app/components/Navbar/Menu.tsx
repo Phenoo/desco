@@ -9,7 +9,7 @@ import TypewriterEffect from './Typewriter'
 import Social from './Social'
 import Yinyang from '../Yinyang'
 import { useRouter } from 'next/navigation'
-import { BsYinYang } from 'react-icons/bs'
+import { FaYinYang } from 'react-icons/fa'
 
 interface MenuProps {
     toggle: () => void;
@@ -69,7 +69,7 @@ interface MenuProps {
                 <Social />
 
                 <div className='absolute top-1/3 -right-14 block md:hidden'>
-                  <BsYinYang className='text-neutral-600 animate-spin' size={100} />
+                  <FaYinYang className='text-neutral-600 animate-spin' size={100} />
                 </div>
 
             </motion.div>

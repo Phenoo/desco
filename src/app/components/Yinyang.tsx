@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { BsYinYang } from 'react-icons/bs'
+import { FaYinYang } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 const Yinyang = () => {
@@ -21,7 +21,7 @@ const Yinyang = () => {
       }}
       transition={{ duration: 0.7}}
       className='absolute bottom-4 right-4 md:right-8'>
-        <BsYinYang  className='animate-spin text-3xl sm:text-4xl md:text-[80px]' />
+        <FaYinYang  className='animate-spin text-3xl sm:text-4xl md:text-[80px]' />
     </motion.div>
   )
 }
