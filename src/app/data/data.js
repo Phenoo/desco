@@ -3,6 +3,7 @@ import { AiOutlineMail, AiOutlinePhone} from 'react-icons/ai'
 import { CiLocationArrow1 } from 'react-icons/ci' 
 import { SiTypescript, SiNextdotjs, SiReact, SiTailwindcss,SiPrisma } from 'react-icons/si';
 import { DiHtml5, DiCss3, DiMongodb, DiFirebase } from 'react-icons/di';
+import { BsWhatsapp } from 'react-icons/bs';
 
 export const menuItems = [
     { label: 'Home',  link: '/'},
@@ -48,6 +49,11 @@ export const menuItems = [
       "name": "LinkedIn",
       "link": "https://www.linkedin.com/in/eze-paschal-158457233/",
       "icon": <FaLinkedin/>
+    },
+    {
+      "name": "Whatsapp",
+      "link": "https://wa.link/zk5jhp",
+      "icon": <BsWhatsapp />
     }
   ]
 

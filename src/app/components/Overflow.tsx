@@ -56,7 +56,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 
   return (
-    <div className="parallax">
+    <div className="parallax mb-8">
       <motion.div className="scroller" style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
@@ -73,7 +73,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 const Overflow = () => {
     return (
         <article className='overflow-hidden'>
-          <ParallaxText baseVelocity={5}>FRONT-END   ● </ParallaxText>
+          <ParallaxText baseVelocity={5}>FRONT-END  DEVELOPER ● FRONTEND DEVELOPER ● </ParallaxText>
         </article>
       );
 }

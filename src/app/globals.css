@@ -73,6 +73,7 @@ div{
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
+  margin-top: 2rem;
 }
 
 .parallax .scroller {
@@ -88,6 +89,7 @@ div{
 .parallax span {
   display: block;
   margin-right: 30px;
+  color: #919191;
 }
 
 .glass{

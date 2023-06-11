@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@heroicons/react": "^2.0.18",
     "@motionone/utils": "^10.15.1",
     "@sanity/image-url": "^1.0.2",
@@ -38,6 +39,7 @@
     "react-dom": "18.2.0",
     "react-google-recaptcha": "^2.1.0",
     "react-hook-form": "^7.44.3",
+    "react-icons": "^4.9.0",
     "react-locomotive-scroll": "^0.2.2",
     "react-tagcloud": "^2.3.1",
     "resize-observer-polyfill": "^1.5.1",
@@ -47,6 +49,7 @@
     "typescript": "5.0.4",
     "typewriter-effect": "^2.19.0",
     "use-web3forms": "^1.2.1",
+    "vercel": "^30.2.1",
     "zod": "^3.21.4"
   },
   "devDependencies": {

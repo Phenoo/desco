@@ -5,18 +5,20 @@ import Container from './Navbar/Container'
 import Logo from './Navbar/Logo'
 import { followus } from '../data/data'
 import { BsSend } from 'react-icons/bs'
+import Overflow from './Overflow'
 
 const Contact = () => {
   return (
     <div className='py-8'>
+        <Overflow />
         <Container >
-            <h4 className='text-3xl md:text-6xl uppercase font-bold'>
+            <h4 className='text-3xl md:text-6xl uppercase font-bold mt-24'>
                 ready to work with us ?
             </h4>
 
 
             <div className='flex flex-col my-4 md:flex-row justify-between gap-8'>
-                <div className='text-xl md:text-3xl flex items-center text-white/50'>
+                <div className='text-lg md:text-3xl flex items-center text-white/50'>
                     Feel free to connect with me... <span>send a message</span> 
                     <a href='mailto:descometusah@gmail.com'
                         target="_blank"

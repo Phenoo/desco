@@ -45,6 +45,11 @@ const Projects:React.FC<ProjectsProps> = ({posts}) => {
         </Suspense>
         </div>
 
+        <div className="flex justify-center items-center my-8">
+          <Link href='/projects' className='flex flex-row gap-2 items-center text-3xl md:text-5xl underline transition-all hover:scale-95 hover:opacity-75 '>
+             <span>see all works</span> <BsArrowUpRightCircle />
+          </Link>        
+        </div>
       </Container>
     </div>
   )

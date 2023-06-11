@@ -1,10 +1,14 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { contactItems } from '../data/data';
 import Social from '../components/Navbar/Social';
 import { useForm } from 'react-hook-form'
 import Image from 'next/image';
+import emailjs from '@emailjs/browser'
+
+
+import { motion } from 'framer-motion';
 
 const ContactContainer = () => {
 
@@ -12,28 +16,35 @@ const ContactContainer = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const form = useRef();
+
+    
 
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-     setIsLoading(true);
+  
 
-     // Simulate an asynchronous operation
-     setTimeout(() => {
-       // After 2 seconds, hide the spinner and reset the form
-       setIsLoading(false);
-       setName('');
-       setEmail('');
-       setMessage('');
-     }, 2000);
-  };
+//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+//     e.preventDefault();
+//      setIsLoading(true);
+
+//      // Simulate an asynchronous operation
+//      setTimeout(() => {
+//        // After 2 seconds, hide the spinner and reset the form
+//        setIsLoading(false);
+//      }, 2000);
+//   };
+
 
   return (
     <div className='my-8'>
-        <div className='text-left flex justify-end items-end'>
-            <Image src='https://sdk.bitmoji.com/me/sticker/IpzCRMKWnghYxodIdYxheCATyVeig0bGqzyNqTVZDdcGdEq9ZenXVA/10222157.png?p=dD1wO3Y9aGk7bD1lbl9HQg.v1&size=thumbnail'
+        <motion.div 
+            initial={{ x: 20}}
+            animate={{ x: 0}}
+            transition={{ duration: 0.4}}
+            className='text-left flex justify-end items-end'>
+            <Image src='https://sdk.bitmoji.com/me/sticker/IpzCRMKWnghYxodIdYxheCATyVeig0bGqzyNqTVZDdcGdEq9ZenXVA/20039916.png?p=dD1zO2w9ZW5fR0I.v1&size=thumbnail'
              alt='contact' width={200} height={200} />
-        </div>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
             <div>
                 <h4 className='text-2xl md:text-5xl font-bold'>
@@ -60,7 +71,7 @@ const ContactContainer = () => {
                 </div>
 
             </div>
-            <div>
+            {/* <div>
             <form className="pt-6 mb-4" onSubmit={handleSubmit}>
                 <div className="mb-4">
                 <label className="block text-white text-lg md:text-xl font-bold mb-2" htmlFor="name">
@@ -136,7 +147,7 @@ const ContactContainer = () => {
                 </button>
                 </div>
             </form>
-            </div>
+            </div> */}
 
         </div>
     </div>
