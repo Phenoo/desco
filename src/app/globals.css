@@ -1,0 +1,277 @@
+@import url("https://api.fontshare.com/v2/css?f[]=striper@400&f[]=supreme@400,700&f[]=clash-display@400,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: #111;
+}
+
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  color: white;
+  background: #121212;
+}
+
+ h4 {
+  font-family: 'Clash Display', sans-serif;
+}
+
+h1, a{
+  font-family: 'Striper', sans-serif;
+}
+
+div{
+  font-family: 'Supreme', sans-serif;
+}
+
+.BgAnimation__svg {
+  width: 70vh;
+  height: 700px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 40px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+
+.glass{
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+}
+
+.moving-gradient-background {
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #252525 0%,
+    #fff 50%,
+    #323131 100%
+  ); /* Set your desired gradient colors */
+  background-size: 200% 100%;
+  z-index: -1;
+}
+
+.cursorr {
+  background-color: #ff0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100 !important;
+  pointer-events: none;
+}
+
+.cursorr.hover {
+  background-color: #ff0000; 
+}
+
+.item{
+  width: 200px;
+  height: 160px;
+}
+
+.secondary-cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  background: white;
+  border: 1px solid black;
+  mix-blend-mode: difference;
+  transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+}
+
+.secondary-cursor .regular {
+  width: 40px;
+  height: 40px;
+}
+.secondary-cursor .small {
+  width: 60px;
+  height: 60px;
+}
+
+
+.secondary-cursor {
+  z-index: 10000;
+
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+}
+
+
+.secondary-cursor {
+  width: 30px;
+  height: 30px;
+
+}
+
+.grid-container--element {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.grid-container--element:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 147, 173, 0) 0%,
+    rgba(42, 42, 42, 0.6) 100%
+  );
+
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.3555, 1);
+  opacity: 0;
+}
+
+.grid-container--element:hover:before {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bgUp {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: black;
+  }
+}
+
+@keyframes bgDown {
+  from {
+    background-color: black;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes translateLeftDot {
+  from {
+    transform: translate(20px, -50%);
+  }
+
+  to {
+    transform: translate(0px, -50%);
+  }
+}
+
+@keyframes translateRightDot {
+  from {
+    transform: translate(-20px, -50%);
+  }
+
+  to {
+    transform: translate(0px, -50%);
+  }
+}
