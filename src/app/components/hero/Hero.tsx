@@ -6,8 +6,10 @@ import BackgroundAnimation from '../BackgroundAnimation'
 import Yinyang from '../Yinyang'
 
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
+  const router = useRouter()
   return (
     <div className="w-full h-screen  max-h-screen relative  bg-[url('https://cdn.pixabay.com/photo/2017/01/19/19/24/chess-1993141_640.jpg')] bg-no-repeat bg-cover">
       <div className={`w-full h-full flex flex-col gap-4 justify-center relative bg-black/70`}>
@@ -46,8 +48,13 @@ const Hero = () => {
                   transition={{duration: 0.3, easing: 'ease'}}
                   className='flex gap-4 items-center' 
               >
-                <button className='bg-white text-black px-8 py-3 rounded-3xl capitalize flex items-center gap-2'>contact <BsArrowUpRightCircleFill /> </button>
-                <a href="https://docs.google.com/document/d/1pdfmXCl4jyry6mkY97ASPMw44VhVh0O9/edit?usp=sharing&ouid=109790532587241320784&rtpof=true&sd=true" download='ezepaschalcv' className='capitalize px-8 py-3 rounded-3xl  flex items-center gap-2 bg-red-500 text-white'>get my cv <BsCloudDownload /></a>
+                <button className='bg-white text-black px-8 py-3 rounded-3xl capitalize flex items-center gap-2'
+                  onClick={() => router.push('/contact')}
+                >contact <BsArrowUpRightCircleFill /> </button>
+                <a href="https://docs.google.com/document/d/1pdfmXCl4jyry6mkY97ASPMw44VhVh0O9/edit?usp=sharing&ouid=109790532587241320784&rtpof=true&sd=true" 
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className='capitalize px-8 py-3 rounded-3xl  flex items-center gap-2 bg-red-500 text-white'>get my cv <BsCloudDownload /></a>
               </motion.div>
             </div>
 
